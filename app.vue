@@ -11,7 +11,7 @@
         Квартира
       </div>
       <div class="flat-list__sort-by">
-        S,м2
+        S,м<sup>2</sup>
         <span class="flat-list__order">
         </span>
       </div>
@@ -21,7 +21,7 @@
         </span>
       </div>
       <div class="flat-list__sort-by">
-        Цена, Р
+        Цена, &#8381;
         <span class="flat-list__order">
         </span>
       </div>
@@ -31,11 +31,13 @@
         <img src="/layouts/1.svg" alt="">
       </div>
       <div class="flat-list__title">3-комнатная №104</div>
-      <div class="flat-list__area">53.1м2</div>
+      <div class="flat-list__area">53.1</div>
       <div class="flat-list__floor"><em>2</em> из 17 этаж</div>
-      <div class="flat-list__price">6630500р</div>
+      <div class="flat-list__price">{{new Intl.NumberFormat("ru-RU").format(
+    6650000,
+  )}}</div>
     </div>
-  </section>
+  </section>  
   <aside class="flat-filters">
     <div class="flat-filters__radiogroup">
 
