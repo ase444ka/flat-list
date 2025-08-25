@@ -2,6 +2,7 @@
   <header>
     <h1>Квартиры</h1>
   </header>
+  
   <section class="flat-list">
     <div class="flat-list__heading">
       <div class="flat-list__field-name">
@@ -71,7 +72,8 @@
           до
           <span class="flat-filters__limit-value"></span>
         </div>
-        
+  <MySlider />
+
       </div>
     </div>
   </aside>
