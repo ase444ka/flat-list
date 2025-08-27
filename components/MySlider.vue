@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import {Slider} from '@ark-ui/vue/slider';
-const from = ref(0)
-const to = ref(100)
+const {from, to, label} = defineProps(['from', 'to', 'label'])
+console.log(from, '-', to)
+
 function showDetails(details: {value: number[]}) {
   from.value = details.value[0]
   to.value = details.value[1]
@@ -12,7 +13,7 @@ function showDetails(details: {value: number[]}) {
   <ClientOnly fallback-tag="span" fallback="loading slider...">
     <Slider.Root :defaultValue="[from, to]" @value-change="showDetails">
       <Slider.Label>
-        <div class="slider__label">Стоимость квартиры, &#8381;</div>
+        <div class="slider__label" v-html="label"></div>
         <div class="slider__limits">
           <div class="slider__from">от {{ from }}</div>
           <div class="slider__to">до {{ to }}</div>

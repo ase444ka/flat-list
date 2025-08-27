@@ -25,16 +25,29 @@
       </label>
     </div>
     
-        <MySlider />
-        <MySlider />
-        <MySlider />
-        <MySlider />
+        <MySlider :from="f1" :to="t1" label="'Стоимость квартиры, &#8381;'" />
+        <MySlider :from="f2" :to="t2" label="'Площадь, м<sup>2</sup>'" />
 
         <button>Сбросить параметры</button>
   </aside>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import axios from 'axios';
+const f1 = ref(1)
+const t1 = ref(20)
+const f2 = ref(1)
+const t2 = ref(20)
+onMounted(async () => {
+  try {
+    const response = await axios.get('/api/filters')
+  console.log(response)
+  } catch(e) {
+    console.log(e)
+  }
+  
+})
+</script>
 
 <style lang="scss" scoped>
 .flat-filters {
