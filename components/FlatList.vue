@@ -26,22 +26,29 @@
         </span>
       </div>
     </div>
-    <div class="flat-list__item" v-for="n in 5">
+    <div class="flat-list__item" v-for="flat in flatStore.flats">
       <div class="flat-list__image">
-        <img src="/layouts/1.svg" alt="" />
+        <img :src="flat.image_url" alt="планировка" />
       </div>
-      <div class="flat-list__title">3-комнатная №104</div>
-      <div class="flat-list__area">53.1</div>
-      <div class="flat-list__floor">2 <em>из 17</em></div>
+      <div class="flat-list__title">{{ flat.title }}</div>
+      <div class="flat-list__area">{{flat.area}}</div>
+      <div class="flat-list__floor">{{ flat.floor }} <em>из {{ flat.total_floors }}</em></div>
       <div class="flat-list__price">
-        {{ new Intl.NumberFormat('ru-RU').format(6650000) }}
+        {{ new Intl.NumberFormat('ru-RU').format(flat.price) }}
       </div>
     </div>
-    <button>загрузить еще</button>
+    <button @click="getFlats">загрузить еще</button>
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useFlatStore } from '~/stores/flats';
+const flatStore = useFlatStore()
+console.log(flatStore)
+async function getFlats() {
+  await flatStore.getFlats()
+}
+</script>
 
 <style lang="scss" scoped>
 h1 {
