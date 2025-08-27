@@ -12,6 +12,9 @@ import '~/assets/css/main.css';
 <style lang="scss">
 body {
   margin: 0 auto;
+  * {
+    color: rgba(11, 23, 57, 1);
+  }
 }
 main {
   margin: 96px auto 0;

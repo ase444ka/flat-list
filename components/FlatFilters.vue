@@ -7,11 +7,11 @@
       </label>
       <label for="rooms-2" class="radio">
         <input type="radio" name="rooms" id="rooms-2" class="radio__input" />
-        <div class="radio__control">1К</div>
+        <div class="radio__control">2К</div>
       </label>
       <label for="rooms-3" class="radio">
         <input type="radio" name="rooms" id="rooms-3" class="radio__input" />
-        <div class="radio__control">1К</div>
+        <div class="radio__control">3К</div>
       </label>
       <label for="rooms-4" class="radio">
         <input
@@ -21,36 +21,16 @@
           id="rooms-4"
           class="radio__input"
         />
-        <div class="radio__control">1К</div>
+        <div class="radio__control">4К</div>
       </label>
     </div>
-    <div class="flat-filters__control">
-      <div class="flat-filters__label"></div>
-      <div class="flat-filters__range">
-        <div class="flat-filters__limit_min">
-          от
-          <span class="flat-filters__limit-value"></span>
-        </div>
-        <div class="flat-filters__limit_max">
-          до
-          <span class="flat-filters__limit-value"></span>
-        </div>
-      </div>
-    </div>
-    <div class="flat-filters__control">
-      <div class="flat-filters__label"></div>
-      <div class="flat-filters__range">
-        <div class="flat-filters__limit_min">
-          от
-          <span class="flat-filters__limit-value"></span>
-        </div>
-        <div class="flat-filters__limit_max">
-          до
-          <span class="flat-filters__limit-value"></span>
-        </div>
+    
         <MySlider />
-      </div>
-    </div>
+        <MySlider />
+        <MySlider />
+        <MySlider />
+
+        <button>Сбросить параметры</button>
   </aside>
 </template>
 

@@ -37,6 +37,7 @@
         {{ new Intl.NumberFormat('ru-RU').format(6650000) }}
       </div>
     </div>
+    <button>загрузить еще</button>
   </section>
 </template>
 

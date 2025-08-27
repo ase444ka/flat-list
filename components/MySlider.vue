@@ -11,7 +11,13 @@ function showDetails(details: {value: number[]}) {
 <template>
   <ClientOnly fallback-tag="span" fallback="loading slider...">
     <Slider.Root :defaultValue="[from, to]" @value-change="showDetails">
-      <Slider.Label>от {{ from }} до {{ to }}</Slider.Label>
+      <Slider.Label>
+        <div class="slider__label">Стоимость квартиры, &#8381;</div>
+        <div class="slider__limits">
+          <div class="slider__from">от {{ from }}</div>
+          <div class="slider__to">до {{ to }}</div>
+        </div>
+      </Slider.Label>
       <Slider.Control>
         <Slider.Track>
           <Slider.Range />
@@ -27,9 +33,15 @@ function showDetails(details: {value: number[]}) {
   </ClientOnly>
 </template>
 
-<style>
-.slider > * {
-  width: 100%;
+<style lang="scss">
+.slider {
+  * {
+    width: 100%;
+  }
+  &__limits {
+      display: flex;
+      justify-content: space-between;
+    }
 }
 
 [data-scope='slider'][data-part='root'] {
@@ -39,13 +51,11 @@ function showDetails(details: {value: number[]}) {
   flex-direction: column;
 }
 
-[data-scope='slider'][data-part='root'][data-orientation='vertical'] {
-  height: 240px;
-}
+
 
 [data-scope='slider'][data-part='control'] {
-  --slider-thumb-size: 10px;
-  --slider-track-height: 4px;
+  --slider-thumb-size: 14px;
+  --slider-track-height: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,15 +71,15 @@ function showDetails(details: {value: number[]}) {
   width: var(--slider-thumb-size);
   height: var(--slider-thumb-size);
   border-radius: 999px;
-  background: blue;
+  background: #3EB57C;
 }
 
 [data-scope='slider'][data-part='thumb']:focus-visible {
-  box-shadow: rgb(0 0 0 / 22%) 0px 0px 0px 5px;
+  box-shadow: 0px 6px 20px 0px #95d0a1;
 }
 
 [data-scope='slider'][data-part='thumb']:hover:not([data-disabled]) {
-  background-color: rgb(245, 242, 255);
+  background-color: #ced1d7;
 }
 
 [data-scope='slider'][data-part='thumb'][data-disabled] {
@@ -107,7 +117,7 @@ function showDetails(details: {value: number[]}) {
 }
 
 [data-scope='slider'][data-part='range'] {
-  background: blue;
+  background:  #3EB57C;
   border-radius: inherit;
 }
 
@@ -119,40 +129,12 @@ function showDetails(details: {value: number[]}) {
   height: 100%;
 }
 
-[data-scope='slider'][data-part='range'][data-orientation='vertical'] {
-  width: 100%;
-}
-
-[data-scope='slider'][data-part='value-text'] {
-  margin-inline-start: 12px;
-}
-
-[data-scope='slider'][data-part='marker-group'][data-orientation='vertical'] {
-  height: 100%;
-}
 
 [data-scope='slider'][data-part='marker'] {
-  color: lightgray;
+  background: #3EB57C;
+  
 }
 
-[data-scope='slider'][data-part='marker']:is(
-    [data-state='under-value'],
-    [data-state='at-value']
-  ) {
-  color: red;
-}
 
-[data-scope='slider'][data-part='dragging-indicator'] {
-  background: magenta;
-  border-radius: 4px;
-  padding: 2px 4px;
-  color: white;
-  &[data-orientation='horizontal'] {
-    top: calc(var(--slider-thumb-size) + 8px);
-  }
 
-  &[data-orientation='vertical'] {
-    left: calc(var(--slider-thumb-size) + 8px);
-  }
-}
 </style>
