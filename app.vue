@@ -81,3 +81,30 @@ import '~/assets/css/main.css'
     </div>
   </aside>
 </template>
+
+<style lang="scss">
+h1 {
+  font-weight: bold;
+  font-size: 54px;
+}
+
+.flat-list {
+  &__heading {
+    display: grid;
+    padding: 0 0 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    grid-template-columns: 80px 1fr 120px 120px 120px;
+    gap: 20px
+  }
+  &__item {
+    display: grid;
+    font-size: 16px;
+    color: rgba(11, 23, 57, 1);
+    padding: 16px 0 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    grid-template-columns: 80px 1fr 120px 120px 120px;
+    gap: 20px
+  }
+}
+
+</style>
