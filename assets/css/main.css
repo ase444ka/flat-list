@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'PTRootUI';
+  src: url('/fonts/pt-root-ui_regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTRootUI';
+  src: url('/fonts/pt-root-ui_bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  font-family: PTRootUI, 'Times new Roman', serif;
+}

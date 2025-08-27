@@ -1,3 +1,6 @@
+<script lang="ts">
+import '~/assets/css/main.css'
+</script>
 <template>
   <header>
     <h1>Квартиры</h1>
