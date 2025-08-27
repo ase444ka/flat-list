@@ -44,7 +44,6 @@
 <script setup lang="ts">
 import { useFlatStore } from '~/stores/flats';
 const flatStore = useFlatStore()
-console.log(flatStore)
 async function getFlats() {
   await flatStore.getFlats()
 }

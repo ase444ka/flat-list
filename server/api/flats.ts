@@ -1,41 +1,8 @@
+import {promises as fs} from 'fs';
+import path from 'path';
 export default defineEventHandler(async (event) => {
-  const body = await new Promise((res) => {
-    setTimeout(
-      () =>
-        res([
-          {
-            id: 1,
-            image_url: '/layouts/1.svg',
-            title: '3-комнатная №104',
-            rooms: 3,
-            floor: 2,
-            total_floors: 17,
-            area: 40,
-            price: 7000000,
-          },
-          {
-            id: 2,
-            image_url: '/layouts/1.svg',
-            title: '3-комнатная №104',
-            rooms: 3,
-            floor: 2,
-            total_floors: 17,
-            area: 40,
-            price: 7000000,
-          },
-          {
-            id: 3,
-            image_url: '/layouts/1.svg',
-            title: '3-комнатная №104',
-            rooms: 3,
-            floor: 2,
-            total_floors: 17,
-            area: 40,
-            price: 7000000,
-          },
-        ]),
-      2000
-    );
-  });
-  return body;
+  const filePath = path.join(process.cwd(), 'data', 'flat-list.json');
+  const jsonData = await fs.readFile(filePath, 'utf-8');
+  const flats = JSON.parse(jsonData);
+  return flats;
 });

@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "image_url": "/layouts/1.svg",
+    "title": "2-комнатная №104",
+    "rooms": 2,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 64,
+    "price": 15000000
+  },
+  {
+    "id": 2,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 3,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №105",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 4,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №106",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 5,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №107",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 6,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №108",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 7,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №109",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 8,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №110",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 9,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 10,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 11,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 12,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 13,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 14,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 15,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 16,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 17,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 18,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 19,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 20,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 21,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 22,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 23,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 24,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 25,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 26,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 27,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 28,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 29,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 30,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 31,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 32,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 33,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 34,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 35,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 36,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 75,
+    "price": 20000000
+  },
+  {
+    "id": 37,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 1,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 29,
+    "price": 7000000
+  },
+  {
+    "id": 38,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 2,
+    "floor": 6,
+    "total_floors": 20,
+    "area": 75,
+    "price": 10000000
+  },
+  {
+    "id": 39,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 90,
+    "price": 40000000
+  },
+  {
+    "id": 40,
+    "image_url": "/layouts/1.svg",
+    "title": "3-комнатная №104",
+    "rooms": 3,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 85,
+    "price": 30000000
+  }
+]

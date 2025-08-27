@@ -13,6 +13,7 @@ interface Flat {
   price: number;
 }
 
+
 interface FlatState {
   flats: Flat[] | [];
   error: string | null;
@@ -24,7 +25,8 @@ export const useFlatStore = defineStore('flats', () => {
 
   const getFlats = async () => {
     try {
-      const response = await axios.post('/api/flats', null);
+      const response = await axios.get('/api/flats');
+      console.dir(response)
       flats.value = response.data;
       error.value = null; // Сбрасываем ошибку при успешном запросе
     } catch (error: any) {
