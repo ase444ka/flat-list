@@ -8,6 +8,8 @@ declare global {
     areaFrom: number;
     areaTo: number;
   }
+
+  type requestBody = Partial<Filters>
   
   type Rooms = 1 | 2 | 3 | 4;
   
