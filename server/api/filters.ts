@@ -1,26 +1,7 @@
 import {promises as fs} from 'fs';
 import path from 'path';
 
-interface Filters {
-  rooms: Rooms[];
-  priceFrom: number;
-  priceTo: number;
-  areaFrom: number;
-  areaTo: number;
-}
 
-type Rooms = 1 | 2 | 3 | 4;
-
-interface Flat {
-  id: number;
-  image_url: string;
-  title: string;
-  rooms: Rooms;
-  floor: number;
-  total_floors: number;
-  area: number;
-  price: number;
-}
 export default defineEventHandler(async (event) => {
   const filePath = path.join(process.cwd(), 'data', 'flat-list.json');
   const jsonData = await fs.readFile(filePath, 'utf-8');

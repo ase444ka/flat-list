@@ -1,19 +1,6 @@
 import {ref, computed} from 'vue';
 import axios from 'axios';
 import {defineStore} from 'pinia';
-
-interface Flat {
-  id: number;
-  image_url: string;
-  title: string;
-  rooms: 1 | 2 | 3 | 4;
-  floor: number;
-  total_floors: number;
-  area: number;
-  price: number;
-}
-
-
 interface FlatState {
   flats: Flat[] | [];
   error: string | null;
