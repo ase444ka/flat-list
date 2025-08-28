@@ -1,22 +1,36 @@
 <script setup lang="ts">
 import {Slider} from '@ark-ui/vue/slider';
-const {from, to, label} = defineProps(['from', 'to', 'label'])
-console.log(from, '-', to)
+const {max, min, label} = defineProps<{
+  max: number
+  min: number
+  label: string
+}>()
+const from = ref(min)
+const to = ref(max)
+
+onMounted(() => {
+  console.log('max ', max)
+  console.log('min ', min)
+  console.log(percent.value)
+})
+
+const percent = computed(() => (max - min) / 100)
+
 
 function showDetails(details: {value: number[]}) {
-  from.value = details.value[0]
-  to.value = details.value[1]
+  from.value = Math.round(details.value[0] * percent.value + min)
+  to.value = Math.round(details.value[1] * percent.value + min)
 }
 </script>
 
 <template>
   <ClientOnly fallback-tag="span" fallback="loading slider...">
-    <Slider.Root :defaultValue="[from, to]" @value-change="showDetails">
+    <Slider.Root :defaultValue="[1, 100]" @value-change="showDetails">
       <Slider.Label>
         <div class="slider__label" v-html="label"></div>
         <div class="slider__limits">
-          <div class="slider__from">от {{ from }}</div>
-          <div class="slider__to">до {{ to }}</div>
+          <div class="slider__from">от {{  new Intl.NumberFormat('ru-RU').format(from) }}</div>
+          <div class="slider__to">до {{ new Intl.NumberFormat('ru-RU').format(to) }}</div>
         </div>
       </Slider.Label>
       <Slider.Control>

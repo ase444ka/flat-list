@@ -24,29 +24,31 @@
         <div class="radio__control">4К</div>
       </label>
     </div>
-    
-        <MySlider :from="f1" :to="t1" label="'Стоимость квартиры, &#8381;'" />
-        <MySlider :from="f2" :to="t2" label="'Площадь, м<sup>2</sup>'" />
+    <template v-if="f1 && f2 && t1 && t2">
+      <MySlider :min="f1" :max="t1" label="Стоимость квартиры, &#8381;" />
+      <MySlider :min="f2" :max="t2" label="Площадь, м<sup>2</sup>" />
+    </template>
+    <template v-else>
+      загрузка...
+    </template>
 
-        <button>Сбросить параметры</button>
+    <button>Сбросить параметры</button>
   </aside>
 </template>
 
 <script setup lang="ts">
 import axios from 'axios';
-const f1 = ref(1)
-const t1 = ref(20)
-const f2 = ref(1)
-const t2 = ref(20)
-onMounted(async () => {
-  try {
-    const response = await axios.get('/api/filters')
-  console.log(response)
-  } catch(e) {
-    console.log(e)
-  }
-  
-})
+const f1 = ref(0);
+const t1 = ref(0);
+const f2 = ref(0);
+const t2 = ref(0);
+onBeforeMount(async() => {
+  const {data} = await axios.get('/api/filters');
+  f1.value = data.priceFrom;
+  t1.value = data.priceTo;
+  f2.value = data.areaFrom;
+  t2.value = data.areaTo;
+});
 </script>
 
 <style lang="scss" scoped>
