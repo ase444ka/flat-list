@@ -2,6 +2,7 @@ import {ref} from 'vue';
 import {defineStore} from 'pinia';
 import {useFlatStore} from './flats';
 import {useFilterStore} from './filters';
+import sort from '../utils/sort-flats';
 
 function* generatePagination(flats: Flat[] | []) {
   let page = 0;
@@ -53,8 +54,13 @@ export const usePageStore = defineStore('page', () => {
     isBlocked.value = false;
   }
 
+  const sortShowingFlats = (floor: Order, area: Order, price: Order) => {
+    flatListToShow.value = sort(flatListToShow.value, floor, area, price);
+  };
+
   return {
     flatListToShow,
+    sortShowingFlats,
     isBlocked,
     hasAnotherFlats,
     updateData,

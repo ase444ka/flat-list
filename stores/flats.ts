@@ -1,6 +1,7 @@
 import {ref} from 'vue';
 import axios from 'axios';
 import {defineStore} from 'pinia';
+import sort from '../utils/sort-flats';
 
 export const useFlatStore = defineStore('flats', () => {
   const flats = ref<Flat[] | []>([]);
@@ -16,9 +17,14 @@ export const useFlatStore = defineStore('flats', () => {
     }
   };
 
+  const sortFlats = (floor: Order, area: Order, price: Order) => {
+    flats.value = sort(flats.value, floor, area, price);
+  };
+
   return {
     flats,
     error,
     getFlats,
+    sortFlats
   };
 });

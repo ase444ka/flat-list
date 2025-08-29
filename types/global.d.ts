@@ -12,6 +12,8 @@ declare global {
   type requestBody = Partial<Filters>
   
   type Rooms = 1 | 2 | 3 | 4 | null;
+
+  type Order = 1 | 0 | -1;
   
   interface Flat {
     id: number;

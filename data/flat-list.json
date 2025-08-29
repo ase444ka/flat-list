@@ -2,401 +2,991 @@
   {
     "id": 1,
     "image_url": "/layouts/1.svg",
-    "title": "2-комнатная №104",
-    "rooms": 2,
-    "floor": 5,
+    "title": "номер 1",
+    "rooms": 1,
+    "floor": 4,
     "total_floors": 20,
-    "area": 64,
-    "price": 15000000
+    "area": 70,
+    "price": 10233664
   },
   {
     "id": 2,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 2",
+    "rooms": 2,
+    "floor": 13,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 26,
+    "price": 8133793
   },
   {
     "id": 3,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №105",
+    "title": "номер 3",
     "rooms": 3,
-    "floor": 5,
+    "floor": 7,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 68,
+    "price": 9729028
   },
   {
     "id": 4,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №106",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 4",
+    "rooms": 2,
+    "floor": 15,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 73,
+    "price": 16647672
   },
   {
     "id": 5,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №107",
+    "title": "номер 5",
     "rooms": 3,
-    "floor": 5,
+    "floor": 1,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 80,
+    "price": 45128623
   },
   {
     "id": 6,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №108",
+    "title": "номер 6",
     "rooms": 3,
-    "floor": 5,
+    "floor": 10,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 50,
+    "price": 29550539
   },
   {
     "id": 7,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №109",
+    "title": "номер 7",
     "rooms": 3,
-    "floor": 5,
+    "floor": 17,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 80,
+    "price": 36020669
   },
   {
     "id": 8,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №110",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 8",
+    "rooms": 1,
+    "floor": 10,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 65,
+    "price": 22823779
   },
   {
     "id": 9,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
+    "title": "номер 9",
     "rooms": 3,
-    "floor": 5,
+    "floor": 2,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 83,
+    "price": 37166333
   },
   {
     "id": 10,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 10",
+    "rooms": 4,
+    "floor": 11,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 99,
+    "price": 28923638
   },
   {
     "id": 11,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
+    "title": "номер 11",
     "rooms": 3,
-    "floor": 5,
+    "floor": 6,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 44,
+    "price": 8277136
   },
   {
     "id": 12,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 12",
+    "rooms": 2,
+    "floor": 18,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 84,
+    "price": 39140156
   },
   {
     "id": 13,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 13",
+    "rooms": 4,
+    "floor": 14,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 82,
+    "price": 23897130
   },
   {
     "id": 14,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 14",
+    "rooms": 1,
+    "floor": 1,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 37,
+    "price": 8158196
   },
   {
     "id": 15,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 15",
+    "rooms": 2,
+    "floor": 9,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 95,
+    "price": 31255214
   },
   {
     "id": 16,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 16",
+    "rooms": 4,
+    "floor": 2,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 32,
+    "price": 6418922
   },
   {
     "id": 17,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 17",
+    "rooms": 2,
+    "floor": 17,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 39,
+    "price": 8327972
   },
   {
     "id": 18,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
+    "title": "номер 18",
+    "rooms": 4,
     "floor": 5,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 87,
+    "price": 40572706
   },
   {
     "id": 19,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
+    "title": "номер 19",
     "rooms": 3,
-    "floor": 5,
+    "floor": 17,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 40,
+    "price": 6202570
   },
   {
     "id": 20,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 20",
+    "rooms": 2,
+    "floor": 12,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 99,
+    "price": 45394736
   },
   {
     "id": 21,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
+    "title": "номер 21",
     "rooms": 3,
-    "floor": 5,
+    "floor": 7,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 58,
+    "price": 25841075
   },
   {
     "id": 22,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 22",
+    "rooms": 2,
+    "floor": 20,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 97,
+    "price": 23933981
   },
   {
     "id": 23,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 23",
+    "rooms": 2,
+    "floor": 17,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 69,
+    "price": 15575518
   },
   {
     "id": 24,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 24",
+    "rooms": 2,
+    "floor": 7,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 30,
+    "price": 7151630
   },
   {
     "id": 25,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 25",
+    "rooms": 2,
+    "floor": 20,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 36,
+    "price": 6147343
   },
   {
     "id": 26,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 26",
+    "rooms": 4,
+    "floor": 3,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 57,
+    "price": 27365723
   },
   {
     "id": 27,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 27",
+    "rooms": 1,
+    "floor": 13,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 94,
+    "price": 27124782
   },
   {
     "id": 28,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 28",
+    "rooms": 4,
+    "floor": 20,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 47,
+    "price": 10966855
   },
   {
     "id": 29,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
+    "title": "номер 29",
     "rooms": 3,
-    "floor": 5,
+    "floor": 7,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 50,
+    "price": 13017527
   },
   {
     "id": 30,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 30",
+    "rooms": 2,
+    "floor": 10,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 38,
+    "price": 5501775
   },
   {
     "id": 31,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 31",
+    "rooms": 2,
+    "floor": 10,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 97,
+    "price": 21533042
   },
   {
     "id": 32,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 32",
+    "rooms": 4,
+    "floor": 9,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 74,
+    "price": 27591399
   },
   {
     "id": 33,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 33",
+    "rooms": 2,
+    "floor": 9,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 99,
+    "price": 41474707
   },
   {
     "id": 34,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 34",
+    "rooms": 1,
+    "floor": 1,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 90,
+    "price": 21682854
   },
   {
     "id": 35,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
+    "title": "номер 35",
     "rooms": 3,
-    "floor": 5,
+    "floor": 2,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 85,
+    "price": 27053658
   },
   {
     "id": 36,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 36",
+    "rooms": 2,
+    "floor": 15,
     "total_floors": 20,
-    "area": 75,
-    "price": 20000000
+    "area": 82,
+    "price": 33830496
   },
   {
     "id": 37,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
+    "title": "номер 37",
     "rooms": 1,
-    "floor": 5,
+    "floor": 9,
     "total_floors": 20,
-    "area": 29,
-    "price": 7000000
+    "area": 99,
+    "price": 37153750
   },
   {
     "id": 38,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 2,
-    "floor": 6,
+    "title": "номер 38",
+    "rooms": 1,
+    "floor": 13,
     "total_floors": 20,
-    "area": 75,
-    "price": 10000000
+    "area": 62,
+    "price": 14065654
   },
   {
     "id": 39,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
-    "rooms": 3,
-    "floor": 5,
+    "title": "номер 39",
+    "rooms": 2,
+    "floor": 13,
     "total_floors": 20,
-    "area": 90,
-    "price": 40000000
+    "area": 64,
+    "price": 14742499
   },
   {
     "id": 40,
     "image_url": "/layouts/1.svg",
-    "title": "3-комнатная №104",
+    "title": "номер 40",
+    "rooms": 4,
+    "floor": 15,
+    "total_floors": 20,
+    "area": 82,
+    "price": 41217110
+  },
+  {
+    "id": 41,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 41",
+    "rooms": 1,
+    "floor": 7,
+    "total_floors": 20,
+    "area": 65,
+    "price": 26085921
+  },
+  {
+    "id": 42,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 42",
     "rooms": 3,
-    "floor": 5,
+    "floor": 8,
+    "total_floors": 20,
+    "area": 28,
+    "price": 7933890
+  },
+  {
+    "id": 43,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 43",
+    "rooms": 2,
+    "floor": 13,
+    "total_floors": 20,
+    "area": 27,
+    "price": 5389231
+  },
+  {
+    "id": 44,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 44",
+    "rooms": 4,
+    "floor": 13,
+    "total_floors": 20,
+    "area": 63,
+    "price": 27628293
+  },
+  {
+    "id": 45,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 45",
+    "rooms": 1,
+    "floor": 11,
+    "total_floors": 20,
+    "area": 44,
+    "price": 7080340
+  },
+  {
+    "id": 46,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 46",
+    "rooms": 1,
+    "floor": 19,
+    "total_floors": 20,
+    "area": 43,
+    "price": 14298557
+  },
+  {
+    "id": 47,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 47",
+    "rooms": 3,
+    "floor": 2,
+    "total_floors": 20,
+    "area": 88,
+    "price": 16284550
+  },
+  {
+    "id": 48,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 48",
+    "rooms": 2,
+    "floor": 4,
+    "total_floors": 20,
+    "area": 26,
+    "price": 7404703
+  },
+  {
+    "id": 49,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 49",
+    "rooms": 4,
+    "floor": 17,
+    "total_floors": 20,
+    "area": 88,
+    "price": 20707896
+  },
+  {
+    "id": 50,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 50",
+    "rooms": 4,
+    "floor": 11,
+    "total_floors": 20,
+    "area": 42,
+    "price": 5769269
+  },
+  {
+    "id": 51,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 51",
+    "rooms": 3,
+    "floor": 2,
+    "total_floors": 20,
+    "area": 68,
+    "price": 9950821
+  },
+  {
+    "id": 52,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 52",
+    "rooms": 3,
+    "floor": 6,
+    "total_floors": 20,
+    "area": 83,
+    "price": 40101263
+  },
+  {
+    "id": 53,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 53",
+    "rooms": 3,
+    "floor": 3,
+    "total_floors": 20,
+    "area": 44,
+    "price": 7013521
+  },
+  {
+    "id": 54,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 54",
+    "rooms": 4,
+    "floor": 9,
+    "total_floors": 20,
+    "area": 58,
+    "price": 23286169
+  },
+  {
+    "id": 55,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 55",
+    "rooms": 1,
+    "floor": 12,
+    "total_floors": 20,
+    "area": 38,
+    "price": 7514490
+  },
+  {
+    "id": 56,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 56",
+    "rooms": 3,
+    "floor": 1,
+    "total_floors": 20,
+    "area": 33,
+    "price": 7046665
+  },
+  {
+    "id": 57,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 57",
+    "rooms": 1,
+    "floor": 3,
+    "total_floors": 20,
+    "area": 89,
+    "price": 25696718
+  },
+  {
+    "id": 58,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 58",
+    "rooms": 1,
+    "floor": 11,
+    "total_floors": 20,
+    "area": 53,
+    "price": 24234429
+  },
+  {
+    "id": 59,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 59",
+    "rooms": 3,
+    "floor": 11,
     "total_floors": 20,
     "area": 85,
-    "price": 30000000
+    "price": 29811281
+  },
+  {
+    "id": 60,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 60",
+    "rooms": 3,
+    "floor": 14,
+    "total_floors": 20,
+    "area": 86,
+    "price": 42332508
+  },
+  {
+    "id": 61,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 61",
+    "rooms": 3,
+    "floor": 1,
+    "total_floors": 20,
+    "area": 92,
+    "price": 43347683
+  },
+  {
+    "id": 62,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 62",
+    "rooms": 1,
+    "floor": 15,
+    "total_floors": 20,
+    "area": 75,
+    "price": 23054419
+  },
+  {
+    "id": 63,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 63",
+    "rooms": 3,
+    "floor": 13,
+    "total_floors": 20,
+    "area": 71,
+    "price": 9033374
+  },
+  {
+    "id": 64,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 64",
+    "rooms": 1,
+    "floor": 3,
+    "total_floors": 20,
+    "area": 45,
+    "price": 5591608
+  },
+  {
+    "id": 65,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 65",
+    "rooms": 2,
+    "floor": 14,
+    "total_floors": 20,
+    "area": 45,
+    "price": 8169826
+  },
+  {
+    "id": 66,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 66",
+    "rooms": 4,
+    "floor": 16,
+    "total_floors": 20,
+    "area": 78,
+    "price": 23649752
+  },
+  {
+    "id": 67,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 67",
+    "rooms": 2,
+    "floor": 7,
+    "total_floors": 20,
+    "area": 38,
+    "price": 7962390
+  },
+  {
+    "id": 68,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 68",
+    "rooms": 4,
+    "floor": 18,
+    "total_floors": 20,
+    "area": 92,
+    "price": 35879917
+  },
+  {
+    "id": 69,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 69",
+    "rooms": 2,
+    "floor": 3,
+    "total_floors": 20,
+    "area": 32,
+    "price": 7530874
+  },
+  {
+    "id": 70,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 70",
+    "rooms": 2,
+    "floor": 4,
+    "total_floors": 20,
+    "area": 99,
+    "price": 31148053
+  },
+  {
+    "id": 71,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 71",
+    "rooms": 4,
+    "floor": 7,
+    "total_floors": 20,
+    "area": 89,
+    "price": 21032927
+  },
+  {
+    "id": 72,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 72",
+    "rooms": 4,
+    "floor": 13,
+    "total_floors": 20,
+    "area": 73,
+    "price": 13391629
+  },
+  {
+    "id": 73,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 73",
+    "rooms": 1,
+    "floor": 4,
+    "total_floors": 20,
+    "area": 77,
+    "price": 26251585
+  },
+  {
+    "id": 74,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 74",
+    "rooms": 1,
+    "floor": 11,
+    "total_floors": 20,
+    "area": 28,
+    "price": 8417267
+  },
+  {
+    "id": 75,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 75",
+    "rooms": 3,
+    "floor": 17,
+    "total_floors": 20,
+    "area": 70,
+    "price": 13132428
+  },
+  {
+    "id": 76,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 76",
+    "rooms": 2,
+    "floor": 20,
+    "total_floors": 20,
+    "area": 63,
+    "price": 16363920
+  },
+  {
+    "id": 77,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 77",
+    "rooms": 4,
+    "floor": 8,
+    "total_floors": 20,
+    "area": 80,
+    "price": 20619356
+  },
+  {
+    "id": 78,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 78",
+    "rooms": 1,
+    "floor": 17,
+    "total_floors": 20,
+    "area": 78,
+    "price": 27574487
+  },
+  {
+    "id": 79,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 79",
+    "rooms": 3,
+    "floor": 14,
+    "total_floors": 20,
+    "area": 82,
+    "price": 47506814
+  },
+  {
+    "id": 80,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 80",
+    "rooms": 4,
+    "floor": 9,
+    "total_floors": 20,
+    "area": 86,
+    "price": 20050949
+  },
+  {
+    "id": 81,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 81",
+    "rooms": 2,
+    "floor": 13,
+    "total_floors": 20,
+    "area": 97,
+    "price": 40590263
+  },
+  {
+    "id": 82,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 82",
+    "rooms": 2,
+    "floor": 15,
+    "total_floors": 20,
+    "area": 100,
+    "price": 42638097
+  },
+  {
+    "id": 83,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 83",
+    "rooms": 1,
+    "floor": 20,
+    "total_floors": 20,
+    "area": 71,
+    "price": 17267441
+  },
+  {
+    "id": 84,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 84",
+    "rooms": 1,
+    "floor": 9,
+    "total_floors": 20,
+    "area": 63,
+    "price": 11916788
+  },
+  {
+    "id": 85,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 85",
+    "rooms": 3,
+    "floor": 9,
+    "total_floors": 20,
+    "area": 84,
+    "price": 29275169
+  },
+  {
+    "id": 86,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 86",
+    "rooms": 2,
+    "floor": 16,
+    "total_floors": 20,
+    "area": 72,
+    "price": 16629421
+  },
+  {
+    "id": 87,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 87",
+    "rooms": 1,
+    "floor": 14,
+    "total_floors": 20,
+    "area": 38,
+    "price": 7770461
+  },
+  {
+    "id": 88,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 88",
+    "rooms": 1,
+    "floor": 7,
+    "total_floors": 20,
+    "area": 90,
+    "price": 23537103
+  },
+  {
+    "id": 89,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 89",
+    "rooms": 4,
+    "floor": 15,
+    "total_floors": 20,
+    "area": 59,
+    "price": 25296859
+  },
+  {
+    "id": 90,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 90",
+    "rooms": 4,
+    "floor": 20,
+    "total_floors": 20,
+    "area": 86,
+    "price": 20196487
+  },
+  {
+    "id": 91,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 91",
+    "rooms": 3,
+    "floor": 4,
+    "total_floors": 20,
+    "area": 50,
+    "price": 11347856
+  },
+  {
+    "id": 92,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 92",
+    "rooms": 4,
+    "floor": 8,
+    "total_floors": 20,
+    "area": 84,
+    "price": 21491007
+  },
+  {
+    "id": 93,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 93",
+    "rooms": 2,
+    "floor": 4,
+    "total_floors": 20,
+    "area": 85,
+    "price": 39875049
+  },
+  {
+    "id": 94,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 94",
+    "rooms": 1,
+    "floor": 10,
+    "total_floors": 20,
+    "area": 71,
+    "price": 8519570
+  },
+  {
+    "id": 95,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 95",
+    "rooms": 3,
+    "floor": 17,
+    "total_floors": 20,
+    "area": 30,
+    "price": 6082074
+  },
+  {
+    "id": 96,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 96",
+    "rooms": 3,
+    "floor": 6,
+    "total_floors": 20,
+    "area": 91,
+    "price": 37754973
+  },
+  {
+    "id": 97,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 97",
+    "rooms": 1,
+    "floor": 8,
+    "total_floors": 20,
+    "area": 100,
+    "price": 33500444
+  },
+  {
+    "id": 98,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 98",
+    "rooms": 3,
+    "floor": 13,
+    "total_floors": 20,
+    "area": 58,
+    "price": 26108517
+  },
+  {
+    "id": 99,
+    "image_url": "/layouts/1.svg",
+    "title": "номер 99",
+    "rooms": 4,
+    "floor": 5,
+    "total_floors": 20,
+    "area": 72,
+    "price": 29694827
   }
 ]
