@@ -42,7 +42,9 @@
       <div class="flat-list__image">
         <img :src="flat.image_url" alt="планировка" />
       </div>
-      <div class="flat-list__title">{{`${flat.rooms}-комнатная ${flat.title}` }}</div>
+      <div class="flat-list__title">
+        {{ flat.rooms }}
+      </div>
       <div class="flat-list__area">{{ flat.area }}</div>
       <div class="flat-list__floor">
         {{ flat.floor }} <em>из {{ flat.total_floors }}</em>
@@ -51,10 +53,17 @@
         {{ new Intl.NumberFormat('ru-RU').format(flat.price) }}
       </div>
     </div>
-    <button @click="getAnother" v-if="pageStore.hasAnotherFlats">
+    <button
+      @click="getAnother"
+      v-if="pageStore.hasAnotherFlats"
+      ref="get-another"
+    >
       загрузить еще
     </button>
   </section>
+  <button class="scroll" @click="scrollUp" v-if="showScrollButton">
+    <ArrowUpIcon />
+  </button>
 </template>
 
 <script setup lang="ts">
@@ -70,15 +79,51 @@ function getData(params: Filters) {
   pageStore.updateData(filterStore.filters);
 }
 
+const currentHeight = ref<number | null>(null);
+const currentScroll = ref<number | null>(null);
+
+const showAnotherButton = useTemplateRef<HTMLButtonElement>('get-another');
+
+const setCurrentScroll = () => {
+  const h = document.documentElement.scrollHeight;
+  currentScroll.value = h;
+};
+
+const setCurrentHeight = () => {
+  const h = document.documentElement.clientHeight;
+  currentHeight.value = h;
+};
+
+onMounted(() => {
+  setCurrentHeight();
+  window.addEventListener('resize', setCurrentHeight);
+  window.addEventListener('scroll', setCurrentScroll);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', setCurrentHeight);
+  document.removeEventListener('scroll', setCurrentScroll);
+});
+
+const scrollUp = () => {
+  window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+};
+
+const showScrollButton = computed(
+  () =>
+    currentScroll.value &&
+    currentHeight.value &&
+    currentScroll.value > currentHeight.value
+);
+
 const areaOrder = ref<Order>(0);
 
 const priceOrder = ref<Order>(0);
 
 const floorOrder = ref<Order>(0);
 
-
 function sortByArea() {
-  floorOrder.value = priceOrder.value = 0
+  floorOrder.value = priceOrder.value = 0;
   switch (areaOrder.value) {
     case 0:
       areaOrder.value = 1;
@@ -93,7 +138,7 @@ function sortByArea() {
 }
 
 function sortByPrice() {
-  areaOrder.value = floorOrder.value = 0
+  areaOrder.value = floorOrder.value = 0;
 
   switch (priceOrder.value) {
     case 0:
@@ -109,7 +154,7 @@ function sortByPrice() {
 }
 
 function sortByFloor() {
-  areaOrder.value = priceOrder.value = 0
+  areaOrder.value = priceOrder.value = 0;
 
   switch (floorOrder.value) {
     case 0:
@@ -126,8 +171,12 @@ function sortByFloor() {
 
 watchEffect(() => {
   flatStore.sortFlats(floorOrder.value, areaOrder.value, priceOrder.value);
-  pageStore.sortShowingFlats(floorOrder.value, areaOrder.value, priceOrder.value);
-})
+  pageStore.sortShowingFlats(
+    floorOrder.value,
+    areaOrder.value,
+    priceOrder.value
+  );
+});
 
 const areaAscClass = computed(() =>
   areaOrder.value === 1 ? 'green-icon' : ''
@@ -155,12 +204,32 @@ const floorSortClass = computed(() => (!!floorOrder.value ? 'green' : ''));
 
 onMounted(getData);
 
-function getAnother() {
+async function getAnother() {
   pageStore.getAnotherFlats();
+  await nextTick()
+  if (showAnotherButton.value) {
+    showAnotherButton.value.scrollIntoView({
+      behavior: 'smooth',
+      block: 'end',
+      inline: 'nearest',
+    });
+  }
 }
 </script>
 
 <style lang="scss" scoped>
+.scroll {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #3eb57c;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
 .green-icon {
   * {
     color: #3eb57c !important;
