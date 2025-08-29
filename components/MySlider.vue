@@ -79,6 +79,9 @@ function emitChanges(details: {value: number[]}) {
     display: flex;
     justify-content: space-between;
   }
+  &__label {
+    font-size: 14px;
+  }
 }
 
 [data-scope='slider'][data-part='root'] {

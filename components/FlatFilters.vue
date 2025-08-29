@@ -40,7 +40,7 @@
     </template>
     <template v-else> загрузка... </template>
 
-    <button @click="resetAll">Сбросить параметры</button>
+    <button @click="resetAll">Сбросить параметры <CrossIcon /></button>
   </aside>
 </template>
 
@@ -100,6 +100,18 @@ function resetAll() {
   &__radiogroup {
     display: flex;
     gap: 16px;
+  }
+  button {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 7px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
   }
 }
 .radio {
