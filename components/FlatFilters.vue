@@ -78,9 +78,10 @@ function updateArea(payload: {from: number; to: number}) {
 }
 
 function resetAll() {
+  rooms.value = null
   filterStore.resetFilters();
-  console.log('res')
   pageStore.updateData(filterStore.filters);
+
 }
 </script>
 

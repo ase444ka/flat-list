@@ -42,7 +42,7 @@
       <div class="flat-list__image">
         <img :src="flat.image_url" alt="планировка" />
       </div>
-      <div class="flat-list__title">{{ flat.title }}</div>
+      <div class="flat-list__title">{{`${flat.rooms}-комнатная ${flat.title}` }}</div>
       <div class="flat-list__area">{{ flat.area }}</div>
       <div class="flat-list__floor">
         {{ flat.floor }} <em>из {{ flat.total_floors }}</em>
