@@ -14,4 +14,5 @@
 
 * {
   font-family: PTRootUI, 'Times new Roman', serif;
+  box-sizing: border-box;
 }

@@ -17,10 +17,17 @@ body {
   }
 }
 main {
-  margin: 96px auto 0;
+  margin: 96px auto;
   display: flex;
   gap: 80px;
   max-width: 1440px;
-  justify-content: center;
+  justify-content: center; 
+  @media (max-width: 960px) {
+      gap: 20px;
+      margin: 48px;
+    }
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
 }
 </style>

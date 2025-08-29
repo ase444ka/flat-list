@@ -2,10 +2,10 @@
   <section class="flat-list">
     <h1>Квартиры</h1>
     <div class="flat-list__heading">
-      <div class="flat-list__field-name">Планировка</div>
-      <div class="flat-list__field-name">Квартира</div>
+      <div class="flat-list__field-name flat-list__field-name_to_img">Планировка</div>
+      <div class="flat-list__field-name flat-list__field-name_to_title">Квартира</div>
       <div
-        class="flat-list__sort-by"
+        class="flat-list__sort-by flat-list__sort-by_to_area"
         :class="areaSortClass"
         @click="sortByArea"
       >
@@ -16,7 +16,7 @@
         </span>
       </div>
       <div
-        class="flat-list__sort-by"
+        class="flat-list__sort-by flat-list__sort-by_to_floor"
         :class="floorSortClass"
         @click="sortByFloor"
       >
@@ -27,7 +27,7 @@
         </span>
       </div>
       <div
-        class="flat-list__sort-by"
+        class="flat-list__sort-by flat-list__sort-by_to_price"
         :class="priceSortClass"
         @click="sortByPrice"
       >
@@ -206,13 +206,14 @@ onMounted(getData);
 
 async function getAnother() {
   pageStore.getAnotherFlats();
-  await nextTick()
+  await nextTick();
   if (showAnotherButton.value) {
     showAnotherButton.value.scrollIntoView({
       behavior: 'smooth',
       block: 'end',
       inline: 'nearest',
     });
+
   }
 }
 </script>
@@ -254,7 +255,22 @@ h1 {
     padding: 0 0 16px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     grid-template-columns: 80px 1fr 120px 120px 120px;
+    grid-template-areas: 'a b c d e';
     gap: 20px;
+    @media (max-width: 960px) {
+      grid-template-columns: 80px 80px 1fr;
+      grid-template-areas: 'c d e';
+    }
+  }
+  &__field-name {
+    padding-top: 5px;
+
+    &_to_img {
+      grid-area: 'a';
+    }
+    &_to_title {
+      grid-area: 'b';
+    }
   }
   &__item {
     display: grid;
@@ -263,21 +279,55 @@ h1 {
     padding: 16px 0 24px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     grid-template-columns: 80px 1fr 120px 120px 120px;
+    grid-template-areas: "a b c d e";
     gap: 20px;
+    @media (max-width: 960px) {
+      font-size: 14px;
+      grid-template-columns: auto auto auto 1fr;
+      grid-template-areas:  "b b b a"
+                            "c d e a";
+    }
     em {
       color: #848a9b;
       font-style: normal;
     }
   }
+  &__image {
+    grid-area: a;
+    justify-self: end;
+  }
+  &__title {
+    grid-area: b;
+  }
+  &__area {
+    grid-area: c;
+  }
+  &__floor {
+    grid-area: d;
+  }
+  &__price {
+    grid-area: e;
+  }
   &__sort-by {
     display: flex;
+    gap: 5px;
+    align-items: center;
     cursor: pointer;
+    &_to_floor {
+      grid-area: c;
+    }
+    &_to_area {
+      grid-area: d;
+    }
+    &_to_price {
+      grid-area: e;
+    }
+    
   }
   &__order {
     display: flex;
     flex-direction: column;
-    width: 20px;
-    height: 20px;
+    padding-top: 5px;
     use {
       width: 10px;
       height: 10px;
@@ -296,6 +346,9 @@ h1 {
     border-radius: 25px;
     border-width: 1px;
     border-color: #0b173933;
+  }
+  @media (max-width: 700px) {
+    order: 1;
   }
 }
 </style>

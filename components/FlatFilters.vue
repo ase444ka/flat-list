@@ -115,6 +115,18 @@ function resetAll() {
     align-items: center;
     gap: 10px;
   }
+  @media (max-width: 960px) {
+    padding: 20px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-basis: 318px;
+  }
+  @media (max-width: 800px) {
+    flex-basis: 250px;
+  }
+  @media (max-width: 700px) {
+    order: 0;
+  }
 }
 .radio {
   &__input {
