@@ -1,3 +1,7 @@
+:root {
+  --green: #3eb57c;
+}
+
 @font-face {
   font-family: 'PTRootUI';
   src: url('/fonts/pt-root-ui_regular.ttf');

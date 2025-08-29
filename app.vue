@@ -7,6 +7,12 @@
 
 <script lang="ts">
 import '~/assets/css/main.css';
+import { defineComponent } from 'vue';
+
+   export default defineComponent({
+       name: 'App',
+       // другие настройки компонента
+   });
 </script>
 
 <style lang="scss">

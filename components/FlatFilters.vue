@@ -149,7 +149,7 @@ function resetAll() {
     }
   }
   input:checked ~ &__control {
-    background-color: #3eb57c;
+    background-color:  var(--green);
     box-shadow: 0px 6px 20px 0px #95d0a1;
     color: white;
   }

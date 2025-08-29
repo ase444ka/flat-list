@@ -109,7 +109,7 @@ function emitChanges(details: {value: number[]}) {
   width: var(--slider-thumb-size);
   height: var(--slider-thumb-size);
   border-radius: 999px;
-  background: #3eb57c;
+  background:  var(--green);
 }
 
 [data-scope='slider'][data-part='thumb']:focus-visible {
@@ -155,7 +155,7 @@ function emitChanges(details: {value: number[]}) {
 }
 
 [data-scope='slider'][data-part='range'] {
-  background: #3eb57c;
+  background: var(--green);
   border-radius: inherit;
 }
 
@@ -168,6 +168,6 @@ function emitChanges(details: {value: number[]}) {
 }
 
 [data-scope='slider'][data-part='marker'] {
-  background: #3eb57c;
+  background:  var(--green);
 }
 </style>

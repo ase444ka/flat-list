@@ -225,7 +225,7 @@ async function getAnother() {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  background-color: #3eb57c;
+  background-color: var(--green);
   border: none;
   outline: none;
   border-radius: 50%;

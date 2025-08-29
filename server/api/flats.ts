@@ -2,7 +2,7 @@ import {promises as fs} from 'fs';
 import path from 'path';
 
 export async function receiveFlats() {
-  const filePath = path.join(process.cwd(), 'data', 'flat-list.json');
+  const filePath = path.join(process.cwd(), 'public', 'flat-list.json');
   const jsonData = await fs.readFile(filePath, 'utf-8');
   return JSON.parse(jsonData);
 }
