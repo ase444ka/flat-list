@@ -2,14 +2,20 @@ import {ref} from 'vue';
 import {defineStore} from 'pinia';
 import {useFlatStore} from './flats';
 
+const initialFilters: Filters = {
+  rooms: [1, 2, 3, 4],
+  priceFrom: 0,
+  priceTo: 0,
+  areaFrom: 0,
+  areaTo: 0,
+}
+
 export const useFilterStore = defineStore('filters', () => {
-  const filters = ref<Filters>({
-    rooms: [1, 2, 3, 4],
-    priceFrom: 0,
-    priceTo: 0,
-    areaFrom: 0,
-    areaTo: 0,
-  });
+  const filters = ref<Filters>(initialFilters);
+
+  function resetFilters() {
+    filters.value = initialFilters
+  }
 
   function getFilters() {
     const flatStore = useFlatStore();
@@ -45,5 +51,6 @@ export const useFilterStore = defineStore('filters', () => {
   return {
     filters,
     getFilters,
+    resetFilters
   };
 });

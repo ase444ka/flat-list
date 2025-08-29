@@ -1,27 +1,18 @@
 <template>
   <aside class="flat-filters">
     <div class="flat-filters__radiogroup">
-      <label for="rooms-1" class="radio">
-        <input type="radio" name="rooms" id="rooms-1" class="radio__input" />
-        <div class="radio__control">1К</div>
-      </label>
-      <label for="rooms-2" class="radio">
-        <input type="radio" name="rooms" id="rooms-2" class="radio__input" />
-        <div class="radio__control">2К</div>
-      </label>
-      <label for="rooms-3" class="radio">
-        <input type="radio" name="rooms" id="rooms-3" class="radio__input" />
-        <div class="radio__control">3К</div>
-      </label>
-      <label for="rooms-4" class="radio">
+      <label :for="`rooms-${n}`" class="radio" v-for="n of 4">
         <input
           type="radio"
-          disabled
           name="rooms"
-          id="rooms-4"
+          :id="`rooms-${n}`"
           class="radio__input"
+          :disabled="!filterStore.filters.rooms.includes(n as Rooms)"
+          :value="n"
+          v-model="rooms"
+          @change="updateRooms"
         />
-        <div class="radio__control">4К</div>
+        <div class="radio__control">{{ n }}К</div>
       </label>
     </div>
     <template
@@ -35,38 +26,62 @@
       <MySlider
         :min="filterStore.filters.priceFrom"
         :max="filterStore.filters.priceTo"
-        :disabled = "pageStore.isBlocked"
+        :disabled="pageStore.isBlocked"
         @change="updatePrice"
         label="Стоимость квартиры, &#8381;"
       />
       <MySlider
         :min="filterStore.filters.areaFrom"
         :max="filterStore.filters.areaTo"
-        :disabled = "pageStore.isBlocked"
+        :disabled="pageStore.isBlocked"
         @change="updateArea"
         label="Площадь, м<sup>2</sup>"
       />
     </template>
     <template v-else> загрузка... </template>
 
-    <button>Сбросить параметры</button>
+    <button @click="resetAll">Сбросить параметры</button>
   </aside>
 </template>
 
 <script setup lang="ts">
 import {useFilterStore} from '~/stores/filters';
-import {usePageStore} from '~/stores/page'
+import {usePageStore} from '~/stores/page';
+
 const filterStore = useFilterStore();
-const pageStore = usePageStore()
+const pageStore = usePageStore();
 
-function updatePrice(payload: {from: number, to: number}) {
-  pageStore.updateData({...filterStore.filters, priceFrom: payload.from, priceTo: payload.to})
+const rooms = ref(null);
+
+
+function updateRooms() {
+  pageStore.updateData({
+    ...filterStore.filters,
+    rooms: [rooms.value],
+  });
 }
 
-function updateArea(payload: {from: number, to: number}) {
-  pageStore.updateData({...filterStore.filters, areaFrom: payload.from, areaTo: payload.to})
+function updatePrice(payload: {from: number; to: number}) {
+  pageStore.updateData({
+    ...filterStore.filters,
+    priceFrom: payload.from,
+    priceTo: payload.to,
+  });
 }
 
+function updateArea(payload: {from: number; to: number}) {
+  pageStore.updateData({
+    ...filterStore.filters,
+    areaFrom: payload.from,
+    areaTo: payload.to,
+  });
+}
+
+function resetAll() {
+  filterStore.resetFilters();
+  console.log('res')
+  pageStore.updateData(filterStore.filters);
+}
 </script>
 
 <style lang="scss" scoped>
