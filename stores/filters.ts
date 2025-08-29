@@ -13,9 +13,8 @@ export const useFilterStore = defineStore('filters', () => {
 
   function getFilters() {
     const flatStore = useFlatStore();
-
     const accessibleFilters = flatStore.flats.reduce(
-      (prev: Filters, cur: Flat) => {
+      (prev: Filters, cur: Flat, index) => {
         const filters = {
           ...prev,
         };
@@ -25,13 +24,13 @@ export const useFilterStore = defineStore('filters', () => {
         if (filters.priceFrom > cur.price || filters.priceFrom === 0) {
           filters.priceFrom = cur.price;
         }
-        if (filters.priceTo < cur.price) {
+        if (filters.priceTo < cur.price || filters.priceFrom === 0) {
           filters.priceTo = cur.price;
         }
         if (filters.areaFrom > cur.area || filters.areaFrom === 0) {
           filters.areaFrom = cur.area;
         }
-        if (filters.areaTo < cur.area) {
+        if (filters.areaTo < cur.area || filters.areaFrom === 0) {
           filters.areaTo = cur.area;
         }
         return filters;
@@ -40,6 +39,8 @@ export const useFilterStore = defineStore('filters', () => {
     );
     filters.value = accessibleFilters;
   }
+
+
 
   return {
     filters,

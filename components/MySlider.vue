@@ -1,36 +1,58 @@
 <script setup lang="ts">
 import {Slider} from '@ark-ui/vue/slider';
-const {max, min, label} = defineProps<{
-  max: number
-  min: number
-  label: string
-}>()
-const from = ref(min)
-const to = ref(max)
+const {max, min, label, disabled} = defineProps<{
+  max: number;
+  min: number;
+  label: string;
+  disabled: boolean;
+}>();
 
-onMounted(() => {
-  console.log('max ', max)
-  console.log('min ', min)
-  console.log(percent.value)
+
+
+const emit = defineEmits<{
+  (e: 'change', payload: {from: number; to: number}): void
+}>()
+const from = ref(min);
+const to = ref(max);
+
+
+watchEffect(() => {
+  from.value = min
+  to.value = max
 })
 
-const percent = computed(() => (max - min) / 100)
+const percent = computed(() => (max - min) / 100);
 
+function changeLabels(details: {value: number[]}) {
+  from.value = Math.floor(details.value[0] * percent.value + min);
+  to.value = Math.floor(details.value[1] * percent.value + min);
+}
 
-function showDetails(details: {value: number[]}) {
-  from.value = Math.round(details.value[0] * percent.value + min)
-  to.value = Math.round(details.value[1] * percent.value + min)
+function emitChanges(details: {value: number[]}) {
+  emit('change', {
+    from: Math.floor(details.value[0] * percent.value + min),
+    to: Math.ceil(details.value[1] * percent.value + min),
+  });
 }
 </script>
 
 <template>
   <ClientOnly fallback-tag="span" fallback="loading slider...">
-    <Slider.Root :defaultValue="[1, 100]" @value-change="showDetails">
+    <Slider.Root
+      :defaultValue="[1, 100]"
+      :disabled="disabled"
+      @value-change="changeLabels"
+      @value-change-end="emitChanges"
+    >
       <Slider.Label>
         <div class="slider__label" v-html="label"></div>
         <div class="slider__limits">
-          <div class="slider__from">от {{  new Intl.NumberFormat('ru-RU').format(from) }}</div>
-          <div class="slider__to">до {{ new Intl.NumberFormat('ru-RU').format(to) }}</div>
+          <div class="slider__from">
+            от {{ new Intl.NumberFormat('ru-RU').format(from) }}
+          </div>
+          <div class="slider__to">
+            до {{ new Intl.NumberFormat('ru-RU').format(to) }}
+          </div>
         </div>
       </Slider.Label>
       <Slider.Control>
@@ -54,9 +76,9 @@ function showDetails(details: {value: number[]}) {
     width: 100%;
   }
   &__limits {
-      display: flex;
-      justify-content: space-between;
-    }
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 [data-scope='slider'][data-part='root'] {
@@ -65,8 +87,6 @@ function showDetails(details: {value: number[]}) {
   display: flex;
   flex-direction: column;
 }
-
-
 
 [data-scope='slider'][data-part='control'] {
   --slider-thumb-size: 14px;
@@ -86,7 +106,7 @@ function showDetails(details: {value: number[]}) {
   width: var(--slider-thumb-size);
   height: var(--slider-thumb-size);
   border-radius: 999px;
-  background: #3EB57C;
+  background: #3eb57c;
 }
 
 [data-scope='slider'][data-part='thumb']:focus-visible {
@@ -132,7 +152,7 @@ function showDetails(details: {value: number[]}) {
 }
 
 [data-scope='slider'][data-part='range'] {
-  background:  #3EB57C;
+  background: #3eb57c;
   border-radius: inherit;
 }
 
@@ -144,12 +164,7 @@ function showDetails(details: {value: number[]}) {
   height: 100%;
 }
 
-
 [data-scope='slider'][data-part='marker'] {
-  background: #3EB57C;
-  
+  background: #3eb57c;
 }
-
-
-
 </style>

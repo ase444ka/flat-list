@@ -37,20 +37,27 @@
         {{ new Intl.NumberFormat('ru-RU').format(flat.price) }}
       </div>
     </div>
-    <button @click="getAnother">загрузить еще</button>
+    <button @click="getAnother" v-if="pageStore.hasAnotherFlats">загрузить еще</button>
   </section>
 </template>
 
 <script setup lang="ts">
 import { usePageStore } from '~/stores/page';
+import {useFilterStore} from '~/stores/filters';
 const pageStore = usePageStore()
-async function getFlats() {
-  await pageStore.applyFilters()
+
+
+function getData(params: Filters) {
+  const filterStore = useFilterStore();
+  const pageStore = usePageStore();
+  pageStore.updateData(filterStore.filters);
 }
+
+onMounted(getData);
+
 function getAnother() {
   pageStore.getAnotherFlats()
 }
-onMounted(getFlats)
 </script>
 
 <style lang="scss" scoped>

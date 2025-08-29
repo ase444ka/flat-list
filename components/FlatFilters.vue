@@ -24,31 +24,49 @@
         <div class="radio__control">4К</div>
       </label>
     </div>
-    <template v-if="f1 && f2 && t1 && t2">
-      <MySlider :min="f1" :max="t1" label="Стоимость квартиры, &#8381;" />
-      <MySlider :min="f2" :max="t2" label="Площадь, м<sup>2</sup>" />
+    <template
+      v-if="
+        filterStore.filters.priceFrom &&
+        filterStore.filters.priceTo &&
+        filterStore.filters.areaFrom &&
+        filterStore.filters.areaTo
+      "
+    >
+      <MySlider
+        :min="filterStore.filters.priceFrom"
+        :max="filterStore.filters.priceTo"
+        :disabled = "pageStore.isBlocked"
+        @change="updatePrice"
+        label="Стоимость квартиры, &#8381;"
+      />
+      <MySlider
+        :min="filterStore.filters.areaFrom"
+        :max="filterStore.filters.areaTo"
+        :disabled = "pageStore.isBlocked"
+        @change="updateArea"
+        label="Площадь, м<sup>2</sup>"
+      />
     </template>
-    <template v-else>
-      загрузка...
-    </template>
+    <template v-else> загрузка... </template>
 
     <button>Сбросить параметры</button>
   </aside>
 </template>
 
 <script setup lang="ts">
-import axios from 'axios';
-const f1 = ref(0);
-const t1 = ref(0);
-const f2 = ref(0);
-const t2 = ref(0);
-onBeforeMount(async() => {
-  const {data} = await axios.get('/api/filters');
-  f1.value = data.priceFrom;
-  t1.value = data.priceTo;
-  f2.value = data.areaFrom;
-  t2.value = data.areaTo;
-});
+import {useFilterStore} from '~/stores/filters';
+import {usePageStore} from '~/stores/page'
+const filterStore = useFilterStore();
+const pageStore = usePageStore()
+
+function updatePrice(payload: {from: number, to: number}) {
+  pageStore.updateData({...filterStore.filters, priceFrom: payload.from, priceTo: payload.to})
+}
+
+function updateArea(payload: {from: number, to: number}) {
+  pageStore.updateData({...filterStore.filters, areaFrom: payload.from, areaTo: payload.to})
+}
+
 </script>
 
 <style lang="scss" scoped>
