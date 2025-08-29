@@ -26,7 +26,7 @@
         </span>
       </div>
     </div>
-    <div class="flat-list__item" v-for="flat in flatStore.flats">
+    <div class="flat-list__item" v-for="flat in pageStore.flatListToShow">
       <div class="flat-list__image">
         <img :src="flat.image_url" alt="планировка" />
       </div>
@@ -37,16 +37,20 @@
         {{ new Intl.NumberFormat('ru-RU').format(flat.price) }}
       </div>
     </div>
-    <button @click="getFlats">загрузить еще</button>
+    <button @click="getAnother">загрузить еще</button>
   </section>
 </template>
 
 <script setup lang="ts">
-import { useFlatStore } from '~/stores/flats';
-const flatStore = useFlatStore()
+import { usePageStore } from '~/stores/page';
+const pageStore = usePageStore()
 async function getFlats() {
-  await flatStore.getFlats()
+  await pageStore.applyFilters()
 }
+function getAnother() {
+  pageStore.getAnotherFlats()
+}
+onMounted(getFlats)
 </script>
 
 <style lang="scss" scoped>

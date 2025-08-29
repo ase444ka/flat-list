@@ -1,19 +1,14 @@
-import {ref, computed} from 'vue';
+import {ref} from 'vue';
 import axios from 'axios';
 import {defineStore} from 'pinia';
-interface FlatState {
-  flats: Flat[] | [];
-  error: string | null;
-}
 
 export const useFlatStore = defineStore('flats', () => {
-  const flats = ref<Flat[]>([]);
+  const flats = ref<Flat[] | []>([]);
   const error = ref<string | null>(null);
 
-  const getFlats = async () => {
+  const getFlats = async (body: Partial<Filters>) => {
     try {
-      const response = await axios.get('/api/flats');
-      console.dir(response)
+      const response = await axios.post('/api/flats', body);
       flats.value = response.data;
       error.value = null; // Сбрасываем ошибку при успешном запросе
     } catch (error: any) {
