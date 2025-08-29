@@ -13,8 +13,8 @@ function* generatePagination(flats: Flat[] | []) {
       done = flats.length <= 5;
     } else {
       console.log('page ', page, 'it is ', 5 + (page - 1) * 20);
-      done = flats.length <= 5 + page * 20;
-      value = flats.slice(5 + (page - 1) * 20).slice(0, 20) as Flat[] | [];
+      done = flats.length <= 5 + (page - 1) * 20;
+      value = flats.slice(5 + (page - 2) * 20).slice(0, 20) as Flat[] | [];
     }
     if (done) {
       return value;

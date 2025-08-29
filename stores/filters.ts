@@ -38,7 +38,7 @@ export const useFilterStore = defineStore('filters', () => {
       },
       {rooms: [], priceFrom: 0, priceTo: 0, areaFrom: 0, areaTo: 0}
     );
-    return accessibleFilters;
+    filters.value = accessibleFilters;
   }
 
   return {
