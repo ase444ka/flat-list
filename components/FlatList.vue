@@ -70,12 +70,13 @@
 import {usePageStore} from '~/stores/page';
 import {useFilterStore} from '~/stores/filters';
 import {useFlatStore} from '~/stores/flats';
+
+const filterStore = useFilterStore();
 const pageStore = usePageStore();
 const flatStore = useFlatStore();
 
-function getData(params: Filters) {
-  const filterStore = useFilterStore();
-  const pageStore = usePageStore();
+function getData() {
+  filterStore.init()
   pageStore.updateData(filterStore.filters);
 }
 
@@ -98,6 +99,7 @@ onMounted(() => {
   setCurrentHeight();
   window.addEventListener('resize', setCurrentHeight);
   window.addEventListener('scroll', setCurrentScroll);
+  getData()
 });
 
 onBeforeUnmount(() => {
@@ -202,7 +204,6 @@ const floorDescClass = computed(() =>
 );
 const floorSortClass = computed(() => (!!floorOrder.value ? 'green' : ''));
 
-onMounted(getData);
 
 async function getAnother() {
   pageStore.getAnotherFlats();

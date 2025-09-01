@@ -1,6 +1,7 @@
 import {ref} from 'vue';
 import {defineStore} from 'pinia';
 import {useFlatStore} from './flats';
+import storage from '../utils/localStorage'
 
 const initialFilters: Filters = {
   rooms: [1, 2, 3, 4],
@@ -15,6 +16,15 @@ export const useFilterStore = defineStore('filters', () => {
 
   function resetFilters() {
     filters.value = initialFilters
+  }
+
+  function init() {
+    const savedFilters = storage.get('filters')
+    if (savedFilters) {
+      filters.value = savedFilters
+    } else {
+      filters.value = initialFilters
+    }
   }
 
   function getFilters() {
@@ -44,6 +54,7 @@ export const useFilterStore = defineStore('filters', () => {
       {rooms: [], priceFrom: 0, priceTo: 0, areaFrom: 0, areaTo: 0}
     );
     filters.value = accessibleFilters;
+    storage.set('filters', filters.value)
   }
 
 
@@ -51,6 +62,7 @@ export const useFilterStore = defineStore('filters', () => {
   return {
     filters,
     getFilters,
-    resetFilters
+    resetFilters,
+    init,
   };
 });
