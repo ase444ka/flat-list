@@ -1,65 +1,76 @@
 <template>
   <section class="flat-list">
     <h1>Квартиры</h1>
-    <div class="flat-list__heading">
-      <div class="flat-list__field-name flat-list__field-name_to_img">Планировка</div>
-      <div class="flat-list__field-name flat-list__field-name_to_title">Квартира</div>
-      <div
-        class="flat-list__sort-by flat-list__sort-by_to_area"
-        :class="areaSortClass"
-        @click="sortByArea"
+
+    <template v-if="flatStore.flats.length">
+      <div class="flat-list__heading">
+        <div class="flat-list__field-name flat-list__field-name_to_img">
+          Планировка
+        </div>
+        <div class="flat-list__field-name flat-list__field-name_to_title">
+          Квартира
+        </div>
+        <div
+          class="flat-list__sort-by flat-list__sort-by_to_area"
+          :class="areaSortClass"
+          @click="sortByArea"
+        >
+          S,м<sup>2</sup>
+          <span class="flat-list__order">
+            <SortAscIcon :class="areaAscClass" />
+            <SortDescIcon :class="areaDescClass" />
+          </span>
+        </div>
+        <div
+          class="flat-list__sort-by flat-list__sort-by_to_floor"
+          :class="floorSortClass"
+          @click="sortByFloor"
+        >
+          Этаж
+          <span class="flat-list__order">
+            <SortAscIcon :class="floorAscClass" />
+            <SortDescIcon :class="floorDescClass" />
+          </span>
+        </div>
+        <div
+          class="flat-list__sort-by flat-list__sort-by_to_price"
+          :class="priceSortClass"
+          @click="sortByPrice"
+        >
+          Цена, &#8381;
+          <span class="flat-list__order">
+            <SortAscIcon :class="priceAscClass" />
+            <SortDescIcon :class="priceDescClass" />
+          </span>
+        </div>
+      </div>
+      <div class="flat-list__item" v-for="flat in pageStore.flatListToShow">
+        <div class="flat-list__image">
+          <img :src="flat.image_url" alt="планировка" />
+        </div>
+        <div class="flat-list__title">
+          {{ flat.rooms }}
+        </div>
+        <div class="flat-list__area">{{ flat.area }}</div>
+        <div class="flat-list__floor">
+          {{ flat.floor }} <em>из {{ flat.total_floors }}</em>
+        </div>
+        <div class="flat-list__price">
+          {{ new Intl.NumberFormat('ru-RU').format(flat.price) }}
+        </div>
+      </div>
+      <button
+        @click="getAnother"
+        v-if="pageStore.hasAnotherFlats"
+        ref="get-another"
       >
-        S,м<sup>2</sup>
-        <span class="flat-list__order">
-          <SortAscIcon :class="areaAscClass" />
-          <SortDescIcon :class="areaDescClass" />
-        </span>
-      </div>
-      <div
-        class="flat-list__sort-by flat-list__sort-by_to_floor"
-        :class="floorSortClass"
-        @click="sortByFloor"
-      >
-        Этаж
-        <span class="flat-list__order">
-          <SortAscIcon :class="floorAscClass" />
-          <SortDescIcon :class="floorDescClass" />
-        </span>
-      </div>
-      <div
-        class="flat-list__sort-by flat-list__sort-by_to_price"
-        :class="priceSortClass"
-        @click="sortByPrice"
-      >
-        Цена, &#8381;
-        <span class="flat-list__order">
-          <SortAscIcon :class="priceAscClass" />
-          <SortDescIcon :class="priceDescClass" />
-        </span>
-      </div>
-    </div>
-    <div class="flat-list__item" v-for="flat in pageStore.flatListToShow">
-      <div class="flat-list__image">
-        <img :src="flat.image_url" alt="планировка" />
-      </div>
-      <div class="flat-list__title">
-        {{ flat.rooms }}
-      </div>
-      <div class="flat-list__area">{{ flat.area }}</div>
-      <div class="flat-list__floor">
-        {{ flat.floor }} <em>из {{ flat.total_floors }}</em>
-      </div>
-      <div class="flat-list__price">
-        {{ new Intl.NumberFormat('ru-RU').format(flat.price) }}
-      </div>
-    </div>
-    <button
-      @click="getAnother"
-      v-if="pageStore.hasAnotherFlats"
-      ref="get-another"
-    >
-      загрузить еще
-    </button>
+        загрузить еще
+      </button>
+    </template>
+    <template v-else>
+      Квартир, удоволетворяющих вашему запросу, не найдено. Попробуйте сбросить
+      фильтры.
+    </template>
   </section>
   <button class="scroll" @click="scrollUp" v-if="showScrollButton">
     <ArrowUpIcon />
@@ -76,7 +87,7 @@ const pageStore = usePageStore();
 const flatStore = useFlatStore();
 
 function getData() {
-  filterStore.init()
+  filterStore.init();
   pageStore.updateData(filterStore.filters);
 }
 
@@ -99,7 +110,7 @@ onMounted(() => {
   setCurrentHeight();
   window.addEventListener('resize', setCurrentHeight);
   window.addEventListener('scroll', setCurrentScroll);
-  getData()
+  getData();
 });
 
 onBeforeUnmount(() => {
@@ -204,7 +215,6 @@ const floorDescClass = computed(() =>
 );
 const floorSortClass = computed(() => (!!floorOrder.value ? 'green' : ''));
 
-
 async function getAnother() {
   pageStore.getAnotherFlats();
   await nextTick();
@@ -214,7 +224,6 @@ async function getAnother() {
       block: 'end',
       inline: 'nearest',
     });
-
   }
 }
 </script>
@@ -280,13 +289,14 @@ h1 {
     padding: 16px 0 24px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     grid-template-columns: 80px 1fr 120px 120px 120px;
-    grid-template-areas: "a b c d e";
+    grid-template-areas: 'a b c d e';
     gap: 20px;
     @media (max-width: 960px) {
       font-size: 14px;
       grid-template-columns: auto auto auto 1fr;
-      grid-template-areas:  "b b b a"
-                            "c d e a";
+      grid-template-areas:
+        'b b b a'
+        'c d e a';
     }
     em {
       color: #848a9b;
@@ -323,7 +333,6 @@ h1 {
     &_to_price {
       grid-area: e;
     }
-    
   }
   &__order {
     display: flex;
